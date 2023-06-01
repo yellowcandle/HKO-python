@@ -8,6 +8,9 @@ weather_data = response.json()
 # Extract the temperature data of all stations
 stations = weather_data["temperature"]["data"]
 
+# Sort the stations by descending order of temperature
+sorted_stations = sorted(stations, key=lambda x: x['value'], reverse=True)
+
 # Display the temperature data of all stations
-for station in stations:
+for station in sorted_stations:
     print(f"Station: {station['place']}, Temperature: {station['value']}°C")
