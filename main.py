@@ -14,3 +14,7 @@ sorted_stations = sorted(stations, key=lambda x: x['value'], reverse=True)
 # Display the temperature data of all stations
 for station in sorted_stations:
     print(f"Station: {station['place']}, Temperature: {station['value']}°C")
+
+# Display the humidity data of all stations
+for station in sorted_stations:
+    print(f"Station: {station['place']}, Humidity: {station['humidity']}%")
